@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kade's Music Hub</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+    nav { background: #333; padding: 10px; display: flex; justify-content: space-between; align-items: center; }
+    nav h1 { color: white; margin: 0; }
+    .menu-icon {
+      cursor: pointer;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+    }
+    .menu-icon div {
+      width: 30px;
+      height: 5px;
+      background-color: white;
+      margin: 5px 0;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      background: #444;
+      border-radius: 5px;
+    }
+    .dropdown a {
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+    }
+    .dropdown a:hover {
+      background: #555;
+    }
+    section { padding: 20px; }
+    .product { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+    iframe { width: 560px; height: 315px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Kade's Music Hub</h1>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="dropdown" id="dropdownMenu">
+      <a href="#shop">Shop Tabs</a>
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+
+  <section id="shop">
+    <h2>Shop Tabs</h2>
+    <div class="product">
+      <h3>Guitar Tab 1</h3>
+      <p>Price: $5</p>
+      <button onclick="window.location.href='https://www.paypal.com/your-link'">Buy Now</button>
+    </div>
+    <div class="product">
+      <h3>Guitar Tab 2</h3>
+      <p>Price: $7</p>
+      <button onclick="window.location.href='https://www.paypal.com/your-link'">Buy Now</button>
+    </div>
+  </section>
+
+  <section id="videos">
+    <h2>Performance Videos</h2>
+    <iframe src="https://www.youtube.com/embed/abcd1234" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/efgh5678" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Welcome to my hub! Here you’ll find my guitar tabs and videos. Stay tuned for more.</p>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

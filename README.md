@@ -1,1 +1,12 @@
-# kadeakinci.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Site</title>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <p>Welcome to my new GitHub Pages site!</p>
+</body>
+</html>

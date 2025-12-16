@@ -4,9 +4,28 @@
   <meta charset="UTF-8">
   <title>Kade's Music Hub</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
-    nav { background: #333; padding: 10px; display: flex; justify-content: space-between; align-items: center; }
-    nav h1 { color: white; margin: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navigation bar */
+    nav {
+      background: #222;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 {
+      color: #fff;
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    /* Waffle menu icon */
     .menu-icon {
       cursor: pointer;
       display: inline-block;
@@ -15,30 +34,86 @@
     }
     .menu-icon div {
       width: 30px;
-      height: 5px;
+      height: 4px;
       background-color: white;
       margin: 5px 0;
+      border-radius: 2px;
     }
+
+    /* Dropdown menu */
     .dropdown {
       display: none;
       position: absolute;
-      top: 50px;
-      right: 10px;
-      background: #444;
-      border-radius: 5px;
+      top: 60px;
+      right: 15px;
+      background: #333;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     .dropdown a {
       display: block;
-      padding: 10px;
+      padding: 12px 20px;
       color: white;
       text-decoration: none;
+      font-size: 0.95rem;
     }
     .dropdown a:hover {
-      background: #555;
+      background: #444;
     }
-    section { padding: 20px; }
-    .product { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
-    iframe { width: 560px; height: 315px; }
+
+    /* Section styling */
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #222;
+    }
+
+    /* Product cards */
+    .product {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .product h3 {
+      margin-top: 0;
+    }
+    .product p {
+      color: #666;
+    }
+
+    /* Modern Buy button */
+    .buy-btn {
+      background: #0078d7;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .buy-btn:hover {
+      background: #005fa3;
+    }
+
+    /* Video embeds */
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 8px;
+      margin: 10px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -61,12 +136,12 @@
     <div class="product">
       <h3>Guitar Tab 1</h3>
       <p>Price: $5</p>
-      <button onclick="window.location.href='https://www.paypal.com/your-link'">Buy Now</button>
+      <button class="buy-btn" onclick="window.location.href='https://www.paypal.com/your-link'">Buy Now</button>
     </div>
     <div class="product">
       <h3>Guitar Tab 2</h3>
       <p>Price: $7</p>
-      <button onclick="window.location.href='https://www.paypal.com/your-link'">Buy Now</button>
+      <button class="buy-btn" onclick="window.location.href='https://www.paypal.com/your-link'">Buy Now</button>
     </div>
   </section>
 

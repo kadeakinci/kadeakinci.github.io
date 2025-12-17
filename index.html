@@ -7,13 +7,13 @@
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
-      background: #f9f9f9;
-      color: #333;
+      background: #000; /* Black background */
+      color: #eee;      /* Light text for contrast */
     }
 
     /* Navigation bar */
     nav {
-      background: #222;
+      background: #111;
       padding: 15px;
       display: flex;
       justify-content: space-between;
@@ -46,19 +46,19 @@
       position: absolute;
       top: 60px;
       right: 15px;
-      background: #333;
+      background: #222;
       border-radius: 6px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     }
     .dropdown a {
       display: block;
       padding: 12px 20px;
-      color: white;
+      color: #eee;
       text-decoration: none;
       font-size: 0.95rem;
     }
     .dropdown a:hover {
-      background: #444;
+      background: #333;
     }
 
     /* Section styling */
@@ -68,26 +68,27 @@
       margin: auto;
     }
     section h2 {
-      border-bottom: 2px solid #eee;
+      border-bottom: 2px solid #333;
       padding-bottom: 10px;
       margin-bottom: 20px;
       font-size: 1.5rem;
-      color: #222;
+      color: #fff;
     }
 
     /* Product cards */
     .product {
-      background: #fff;
+      background: #111;
       border-radius: 8px;
       padding: 20px;
       margin: 20px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(255,255,255,0.1);
     }
     .product h3 {
       margin-top: 0;
+      color: #fff;
     }
     .product p {
-      color: #666;
+      color: #aaa;
     }
 
     /* Modern Buy button */
@@ -111,8 +112,8 @@
       max-width: 560px;
       height: 315px;
       border-radius: 8px;
-      margin: 10px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 15px 0;
+      box-shadow: 0 2px 6px rgba(255,255,255,0.2);
     }
   </style>
 </head>
@@ -125,14 +126,31 @@
       <div></div>
     </div>
     <div class="dropdown" id="dropdownMenu">
-      <a href="#shop">Shop Tabs</a>
-      <a href="#videos">Videos</a>
-      <a href="#about">About</a>
+      <a href="#tutorials">Tutorials</a>
+      <a href="#performance">Performance Videos</a>
+      <a href="#producing">Producing Videos</a>
+      <a href="#shop">Buy Tabs</a>
     </div>
   </nav>
 
+  <section id="tutorials">
+    <h2>Tutorials</h2>
+    <iframe src="https://www.youtube.com/embed/YOUR_TUTORIAL_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="performance">
+    <h2>Performance Videos</h2>
+    <iframe src="https://www.youtube.com/embed/wgswRnwxpSg" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/PBEhyhxl_bU" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="producing">
+    <h2>Producing Videos</h2>
+    <iframe src="https://www.youtube.com/embed/YOUR_PRODUCING_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+  </section>
+
   <section id="shop">
-    <h2>Shop Tabs</h2>
+    <h2>Buy Tabs</h2>
     <div class="product">
       <h3>Guitar Tab 1</h3>
       <p>Price: $5</p>
@@ -145,32 +163,14 @@
     </div>
   </section>
 
-  <section id="videos">
-  <h2>Performance Videos</h2>
-  <iframe 
-    src="https://www.youtube.com/embed/wgswRnwxpSg" 
-    frameborder="0" 
-    allowfullscreen>
-  </iframe>
-</section>
-  <iframe 
-    src="https://www.youtube.com/embed/PBEhyhxl_bU" 
-    frameborder="0" 
-    allowfullscreen>
-  </iframe>
-</section>
-
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Welcome to my hub! Here you’ll find my guitar tabs and videos. Stay tuned for more.</p>
-  </section>
-
   <script>
     function toggleMenu() {
       const menu = document.getElementById('dropdownMenu');
       menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     }
+  </script>
+</body>
+</html>
   </script>
 </body>
 </html>
